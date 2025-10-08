@@ -37,22 +37,11 @@ const Header = () => {
           >
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                <svg 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  className="text-white"
-                >
-                  <path 
-                    d="M3 21L12 3L21 21H18L12 9L6 21H3Z" 
-                    fill="currentColor"
-                  />
-                  <path 
-                    d="M8 21L12 13L16 21H8Z" 
-                    fill="rgba(255,255,255,0.3)"
-                  />
-                </svg>
+                <img 
+                  src="/assets/images/HomeLogo.png" 
+                  alt="Description" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
             </div>
             <div className="hidden sm:block">
