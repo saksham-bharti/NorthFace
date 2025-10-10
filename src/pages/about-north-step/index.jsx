@@ -12,7 +12,7 @@ const AboutNorthStep = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>About NorthStep - Strategic Talent Partnership | NorthStep Recruiting</title>
+        <title>About NorthStep - Strategic Talent Partnership | NorthStep Global</title>
         <meta 
           name="description" 
           content="Learn about NorthStep's mission to transform recruitment through strategic partnerships. Meet our expert team and discover our proven methodology for career advancement and organizational success." 
@@ -45,14 +45,14 @@ const AboutNorthStep = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">NorthStep</h3>
-                <p className="text-sm text-white/70 -mt-1">Recruiting</p>
+                <p className="text-sm text-white/70 -mt-1">Global</p>
               </div>
             </div>
             <p className="text-white/70 mb-4">
               Strategic talent partnerships that elevate careers and transform organizations.
             </p>
             <p className="text-sm text-white/50">
-              © {new Date()?.getFullYear()} NorthStep Recruiting. All rights reserved.
+              © {new Date()?.getFullYear()} NorthStep Global. All rights reserved.
             </p>
           </div>
         </div>

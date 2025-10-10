@@ -12,13 +12,13 @@ const IndustriesWeServe = () => {
   return (
     <>
       <Helmet>
-        <title>Industries We Serve - NorthStep Recruiting | Specialized Talent Solutions</title>
+        <title>Industries We Serve - NorthStep Global | Specialized Talent Solutions</title>
         <meta 
           name="description" 
           content="Discover NorthStep's specialized recruitment expertise across technology, healthcare, finance, manufacturing, and more. Industry-specific consultants with proven track records." 
         />
         <meta name="keywords" content="industry recruitment, specialized hiring, technology recruiting, healthcare staffing, financial services talent, manufacturing recruitment" />
-        <meta property="og:title" content="Industries We Serve - NorthStep Recruiting" />
+        <meta property="og:title" content="Industries We Serve - NorthStep Global" />
         <meta property="og:description" content="Specialized recruitment expertise across key sectors with dedicated consultant teams and industry intelligence." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="/industries-we-serve" />
@@ -45,7 +45,7 @@ const IndustriesWeServe = () => {
                     <path d="M8 21L12 13L16 21H8Z" fill="rgba(255,255,255,0.3)"/>
                   </svg>
                 </div>
-                <span className="text-lg font-bold">NorthStep Recruiting</span>
+                <span className="text-lg font-bold">NorthStep Global</span>
               </div>
               <p className="text-white/60 text-sm">
                 © {new Date()?.getFullYear()} NorthStep Global. All rights reserved. | 
