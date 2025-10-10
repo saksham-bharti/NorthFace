@@ -45,13 +45,13 @@ const ContactConsultation = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact & Consultation - NorthStep Recruiting</title>
+        <title>Contact & Consultation - NorthStep Global</title>
         <meta 
           name="description" 
           content="Connect with NorthStep's expert recruiters. Schedule free consultations, get immediate support, and discover how we can help advance your career or find top talent for your organization." 
         />
         <meta name="keywords" content="recruitment consultation, career advice, hiring solutions, contact recruiter, free consultation, NorthStep contact" />
-        <meta property="og:title" content="Contact & Consultation - NorthStep Recruiting" />
+        <meta property="og:title" content="Contact & Consultation - NorthStep Global" />
         <meta property="og:description" content="Schedule your free consultation with our expert recruiters. Multiple contact options available for immediate support." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://northstep.com/contact-consultation" />

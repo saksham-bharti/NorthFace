@@ -17,16 +17,16 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <title>NorthStep Recruiting - Strategic Talent Partnership | Your Next Step North</title>
+        <title>NorthStep Global - Strategic Talent Partnership | Your Next Step North</title>
         <meta 
           name="description" 
-          content="Transform your career or build exceptional teams with NorthStep Recruiting. Strategic talent acquisition connecting ambitious professionals with visionary companies. 95% success rate, $25K average salary increase." 
+          content="Transform your career or build exceptional teams with NorthStep Global. Strategic talent acquisition connecting ambitious professionals with visionary companies. 95% success rate, $25K average salary increase." 
         />
         <meta 
           name="keywords" 
           content="recruitment, talent acquisition, career advancement, hiring, job placement, strategic recruiting, professional development" 
         />
-        <meta property="og:title" content="NorthStep Recruiting - Your Next Step North" />
+        <meta property="og:title" content="NorthStep Global - Your Next Step North" />
         <meta 
           property="og:description" 
           content="Where exceptional talent meets visionary companies. Strategic recruitment partnerships that transform careers and organizations." 
@@ -74,7 +74,7 @@ const Homepage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">NorthStep</h3>
-                    <p className="text-sm text-background/70">Recruiting</p>
+                    <p className="text-sm text-background/70">Global</p>
                   </div>
                 </div>
                 <p className="text-background/80 text-sm leading-relaxed max-w-md">
@@ -107,7 +107,7 @@ const Homepage = () => {
 
             <div className="border-t border-background/20 pt-8 flex flex-col lg:flex-row justify-between items-center">
               <p className="text-sm text-background/60">
-                © {new Date()?.getFullYear()} NorthStep Recruiting. All rights reserved.
+                © {new Date()?.getFullYear()} NorthStep Global. All rights reserved.
               </p>
               <div className="flex space-x-6 mt-4 lg:mt-0">
                 <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">Privacy Policy</a>

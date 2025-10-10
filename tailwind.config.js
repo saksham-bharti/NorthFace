@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import forms from '@tailwindcss/forms'
+import animate from 'tailwindcss-animate'
+
 export default {
   content: [
     "./index.html",
@@ -110,8 +113,5 @@ export default {
       }
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('tailwindcss-animate')
-  ],
+  plugins: [forms, animate],
 }

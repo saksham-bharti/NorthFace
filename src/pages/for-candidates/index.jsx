@@ -69,7 +69,7 @@ const ForCandidatesPage = () => {
           </div>
           
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/70">
-            <p>&copy; {new Date()?.getFullYear()} NorthStep Recruiting. All rights reserved.</p>
+            <p>&copy; {new Date()?.getFullYear()} NorthStep Global. All rights reserved.</p>
           </div>
         </div>
       </footer>

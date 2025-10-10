@@ -13,7 +13,7 @@ const SuccessStoriesPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Success Stories - NorthStep Recruiting | Transformational Career Outcomes</title>
+        <title>Success Stories - NorthStep Global | Transformational Career Outcomes</title>
         <meta name="description" content="Discover compelling case studies of successful placements, career transformations, and company growth. See how NorthStep delivers measurable results for candidates and employers." />
         <meta name="keywords" content="success stories, career transformation, recruitment success, placement outcomes, salary increases, hiring results" />
       </Helmet>
@@ -112,7 +112,7 @@ const SuccessStoriesPage = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">NorthStep</h3>
-                  <p className="text-sm opacity-80">Recruiting</p>
+                  <p className="text-sm opacity-80">Global</p>
                 </div>
               </div>
               <p className="text-background/80 mb-6 max-w-md">
@@ -157,7 +157,7 @@ const SuccessStoriesPage = () => {
           </div>
 
           <div className="border-t border-background/20 mt-12 pt-8 text-center text-background/60">
-            <p>&copy; {new Date()?.getFullYear()} NorthStep Recruiting. All rights reserved.</p>
+            <p>&copy; {new Date()?.getFullYear()} NorthStep Global. All rights reserved.</p>
           </div>
         </div>
       </footer>

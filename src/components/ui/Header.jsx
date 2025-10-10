@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Icon from '../AppIcon';
-import Button from './Button';
+// Removed CTA Button usage per new header spec
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,10 +9,15 @@ const Header = () => {
 
   const navigationItems = [
     { name: 'Home', path: '/homepage', icon: 'Home' },
-    { name: 'For Candidates', path: '/for-candidates', icon: 'Users' },
     { name: 'Industries', path: '/industries-we-serve', icon: 'Building2' },
     { name: 'Success Stories', path: '/success-stories', icon: 'Trophy' },
-    { name: 'About', path: '/about-north-step', icon: 'Info' }
+  ];
+
+  const servicesItems = [
+    { name: 'Consulting', path: '/services/consulting' },
+    { name: 'Talent Acquisition', path: '/services/talent' },
+    { name: 'Advisory', path: '/services/advisory' },
+    { name: 'Training', path: '/services/training' },
   ];
 
   const isActivePath = (path) => location?.pathname === path;
@@ -26,9 +31,9 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center justify-between h-16 px-4 lg:px-8">
+        <div className="grid grid-cols-3 items-center h-14 lg:h-16 px-4 lg:px-8">
           {/* Logo */}
           <Link 
             to="/homepage" 
@@ -36,7 +41,7 @@ const Header = () => {
             onClick={closeMobileMenu}
           >
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-elevation rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
                 <img 
                   src="/assets/images/HomeLogo.png" 
                   alt="Description" 
@@ -45,22 +50,22 @@ const Header = () => {
               </div>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-foreground">
+              <h1 className="text-xl lg:text-2xl font-bold text-foreground">
                 NorthStep
               </h1>
               <p className="text-xs text-muted-foreground -mt-1">
-                Recruiting
+                Global
               </p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center justify-center space-x-1 col-start-2">
             {navigationItems?.map((item) => (
               <Link
                 key={item?.path}
                 to={item?.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover ${
+                className={`px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover ${
                   isActivePath(item?.path)
                     ? 'bg-primary text-primary-foreground shadow-brand'
                     : 'text-foreground hover:text-primary hover:bg-muted'
@@ -69,24 +74,33 @@ const Header = () => {
                 {item?.name}
               </Link>
             ))}
+
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover text-foreground hover:text-primary hover:bg-muted inline-flex items-center gap-2">
+                <span>Services</span>
+                <Icon name="ChevronDown" size={16} />
+              </button>
+              <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute left-0 mt-2 w-56 rounded-lg border border-border bg-white shadow-lg py-2">
+                {servicesItems.map((svc) => (
+                  <Link
+                    key={svc.path}
+                    to={svc.path}
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary"
+                  >
+                    {svc.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/contact-consultation">
-              <Button 
-                variant="outline" 
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                Get Consultation
-              </Button>
-            </Link>
-          </div>
+          {/* Desktop CTA removed per new spec */}
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-200"
+            className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-200 justify-self-end"
             aria-label="Toggle mobile menu"
           >
             <Icon 
@@ -98,7 +112,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="lg:hidden border-t border-border bg-white">
             <nav className="px-4 py-4 space-y-2">
               {navigationItems?.map((item) => (
                 <Link
@@ -115,19 +129,26 @@ const Header = () => {
                   <span>{item?.name}</span>
                 </Link>
               ))}
-              
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-border mt-4">
-                <Link to="/contact-consultation" onClick={closeMobileMenu}>
-                  <Button 
-                    variant="default" 
-                    fullWidth
-                    className="bg-gradient-elevation hover:shadow-elevation"
-                  >
-                    Get Consultation
-                  </Button>
-                </Link>
+
+              {/* Services (mobile) */}
+              <div className="pt-2">
+                <div className="px-4 py-2 text-xs uppercase tracking-wide text-muted-foreground">Services</div>
+                <div className="space-y-1">
+                  {servicesItems.map((svc) => (
+                    <Link
+                      key={svc.path}
+                      to={svc.path}
+                      onClick={closeMobileMenu}
+                      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 text-foreground hover:text-primary hover:bg-muted"
+                    >
+                      <Icon name="ArrowRight" size={18} />
+                      <span>{svc.name}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
+              
+              {/* Mobile CTA removed per new spec */}
             </nav>
           </div>
         )}
