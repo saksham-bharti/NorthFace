@@ -3,12 +3,14 @@ import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
 import NotFound from "pages/NotFound";
-import ForCandidatesPage from './pages/for-candidates';
 import IndustriesWeServe from './pages/industries-we-serve';
-import ContactConsultation from './pages/contact-consultation';
 import SuccessStoriesPage from './pages/success-stories';
-import AboutNorthStep from './pages/about-north-step';
 import Homepage from './pages/homepage';
+import ExecutiveSearch from './pages/services/ExecutiveSearch';
+import SeniorHiring from './pages/services/SeniorHiring';
+import International from './pages/services/International';
+import RPO from './pages/services/RPO';
+import GCCHiring from './pages/services/GCCHiring';
 
 const Routes = () => {
   return (
@@ -18,12 +20,17 @@ const Routes = () => {
       <RouterRoutes>
         {/* Define your route here */}
         <Route path="/" element={<Homepage />} />
-        <Route path="/for-candidates" element={<ForCandidatesPage />} />
-        <Route path="/industries-we-serve" element={<IndustriesWeServe />} />
-        <Route path="/contact-consultation" element={<ContactConsultation />} />
-        <Route path="/success-stories" element={<SuccessStoriesPage />} />
-        <Route path="/about-north-step" element={<AboutNorthStep />} />
         <Route path="/homepage" element={<Homepage />} />
+        <Route path="/industries-we-serve" element={<IndustriesWeServe />} />
+        <Route path="/success-stories" element={<SuccessStoriesPage />} />
+        
+        {/* Service Pages */}
+        <Route path="/services/ExecutiveSearch" element={<ExecutiveSearch />} />
+        <Route path="/services/SeniorHiring" element={<SeniorHiring />} />
+        <Route path="/services/International" element={<International />} />
+        <Route path="/services/RPO" element={<RPO />} />
+        <Route path="/services/GCCHiring" element={<GCCHiring />} />
+        
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

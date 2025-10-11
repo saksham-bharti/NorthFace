@@ -67,8 +67,8 @@ const Homepage = () => {
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
                     <img 
-                      src="/assets/images/DarkLogo.png" 
-                      alt="Description" 
+                      src="/assets/images/HomeLogo.png" 
+                      alt="NorthStep" 
                       className="w-full h-full object-cover rounded-lg"
                     />
                   </div>

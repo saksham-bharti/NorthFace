@@ -14,10 +14,11 @@ const Header = () => {
   ];
 
   const servicesItems = [
-    { name: 'Consulting', path: '/services/consulting' },
-    { name: 'Talent Acquisition', path: '/services/talent' },
-    { name: 'Advisory', path: '/services/advisory' },
-    { name: 'Training', path: '/services/training' },
+    { name: 'Executive Search', path: '/services/ExecutiveSearch' },
+    { name: 'Senior & Mid Level Hiring', path: '/services/SeniorHiring' },
+    { name: 'International Hiring', path: '/services/International' },
+    { name: 'RPO', path: '/services/RPO' },
+    { name: 'GCC Hiring', path: '/services/GCCHiring' },
   ];
 
   const isActivePath = (path) => location?.pathname === path;
@@ -33,7 +34,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-3 items-center h-14 lg:h-16 px-4 lg:px-8">
+        <div className="flex items-center justify-between h-14 lg:h-16 px-4 lg:px-8">
           {/* Logo */}
           <Link 
             to="/homepage" 
@@ -49,8 +50,8 @@ const Header = () => {
                 />
               </div>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl lg:text-2xl font-bold text-foreground">
+            <div>
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">
                 NorthStep
               </h1>
               <p className="text-xs text-muted-foreground -mt-1">
@@ -60,28 +61,27 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center justify-center space-x-1 col-start-2">
-            {navigationItems?.map((item) => (
-              <Link
-                key={item?.path}
-                to={item?.path}
-                className={`px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover ${
-                  isActivePath(item?.path)
-                    ? 'bg-primary text-primary-foreground shadow-brand'
-                    : 'text-foreground hover:text-primary hover:bg-muted'
-                }`}
-              >
-                {item?.name}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center justify-center space-x-1 flex-1">
+            {/* Home */}
+            <Link
+              to="/homepage"
+              className={`px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover whitespace-nowrap inline-flex items-center gap-2 ${
+                isActivePath('/homepage')
+                  ? 'bg-primary text-primary-foreground shadow-brand'
+                  : 'text-foreground hover:text-primary hover:bg-muted'
+              }`}
+            >
+              <Icon name="Home" size={16} />
+              Home
+            </Link>
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover text-foreground hover:text-primary hover:bg-muted inline-flex items-center gap-2">
+              <button className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover text-foreground hover:text-primary hover:bg-muted inline-flex items-center gap-2 whitespace-nowrap">
                 <span>Services</span>
                 <Icon name="ChevronDown" size={16} />
               </button>
-              <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute left-0 mt-2 w-56 rounded-lg border border-border bg-white shadow-lg py-2">
+              <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute left-0 top-full w-56 rounded-lg border border-border bg-white shadow-lg py-2">
                 {servicesItems.map((svc) => (
                   <Link
                     key={svc.path}
@@ -93,14 +93,38 @@ const Header = () => {
                 ))}
               </div>
             </div>
-          </nav>
 
-          {/* Desktop CTA removed per new spec */}
+            {/* Industries */}
+            <Link
+              to="/industries-we-serve"
+              className={`px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover whitespace-nowrap inline-flex items-center gap-2 ${
+                isActivePath('/industries-we-serve')
+                  ? 'bg-primary text-primary-foreground shadow-brand'
+                  : 'text-foreground hover:text-primary hover:bg-muted'
+              }`}
+            >
+              <Icon name="Building2" size={16} />
+              Industries
+            </Link>
+
+            {/* Success Stories */}
+            <Link
+              to="/success-stories"
+              className={`px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover whitespace-nowrap inline-flex items-center gap-2 ${
+                isActivePath('/success-stories')
+                  ? 'bg-primary text-primary-foreground shadow-brand'
+                  : 'text-foreground hover:text-primary hover:bg-muted'
+              }`}
+            >
+              <Icon name="Trophy" size={16} />
+              Success Stories
+            </Link>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-200 justify-self-end"
+            className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
             <Icon 
