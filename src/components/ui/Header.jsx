@@ -44,7 +44,7 @@ const Header = () => {
             <div className="relative">
               <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-elevation rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/assets/images/HomeLogo.png" 
+                  src="/assets/images/Logo.png" 
                   alt="Description" 
                   className="w-full h-full object-cover rounded-lg"
                 />
