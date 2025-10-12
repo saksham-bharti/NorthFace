@@ -7,6 +7,8 @@ import IndustryInsights from './components/IndustryInsights';
 import ConsultantShowcase from './components/ConsultantShowcase';
 import InteractiveTools from './components/InteractiveTools';
 import CallToAction from './components/CallToAction';
+import Icon from '../../components/AppIcon';
+
 
 const IndustriesWeServe = () => {
   return (
@@ -35,22 +37,65 @@ const IndustriesWeServe = () => {
           <CallToAction />
         </main>
 
-        <footer className="bg-foreground text-white py-12">
+        {/* Footer */}
+        <footer className="bg-foreground text-background py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-gradient-elevation rounded-lg flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white">
-                    <path d="M3 21L12 3L21 21H18L12 9L6 21H3Z" fill="currentColor"/>
-                    <path d="M8 21L12 13L16 21H8Z" fill="rgba(255,255,255,0.3)"/>
-                  </svg>
+            <div className="grid lg:grid-cols-4 gap-8 mb-8">
+              {/* Brand */}
+              <div className="lg:col-span-2">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
+                    <img 
+                      src="/assets/images/Logo.png" 
+                      alt="NorthStep" 
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">NorthStep</h3>
+                    <p className="text-sm text-background/70">Global</p>
+                  </div>
                 </div>
-                <span className="text-lg font-bold">NorthStep Global</span>
+                <p className="text-background/80 mb-6 max-w-md">
+                  Strategic talent partnerships that transform careers and organizations. 
+                  Your next step north starts here.
+                </p>
+                <div className="flex space-x-4">
+                  <Icon name="Linkedin" size={20} className="text-background/60 hover:text-background cursor-pointer" />
+                  <Icon name="Twitter" size={20} className="text-background/60 hover:text-background cursor-pointer" />
+                  <Icon name="Facebook" size={20} className="text-background/60 hover:text-background cursor-pointer" />
+                </div>
               </div>
-              <p className="text-white/60 text-sm">
-                © {new Date()?.getFullYear()} NorthStep Global. All rights reserved. | 
-                Transforming careers, building exceptional teams.
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="font-semibold mb-4">Quick Links</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/homepage" className="text-background/80 hover:text-primary transition-colors">Home</a></li>
+                  <li><a href="/success-stories" className="text-background/80 hover:text-primary transition-colors">Success Stories</a></li>
+                </ul>
+              </div>
+
+              {/* Contact */}
+              <div>
+                <h4 className="font-semibold mb-4">Contact</h4>
+                <ul className="space-y-2 text-sm text-background/80">
+                  <li>+1 (555) 123-4567</li>
+                  <li>hello@northstep.com</li>
+                  <li>New York, NY</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="border-t border-background/20 pt-8 flex flex-col lg:flex-row justify-between items-center">
+              <p className="text-sm text-background/60">
+                © {new Date()?.getFullYear()} NorthStep Global. All rights reserved.
               </p>
+              <div className="flex space-x-6 mt-4 lg:mt-0">
+                <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+                <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">Terms of Service</a>
+                <a href="#" className="text-background/60 hover:text-primary text-sm transition-colors">Cookie Policy</a>
+              </div>
             </div>
           </div>
         </footer>
