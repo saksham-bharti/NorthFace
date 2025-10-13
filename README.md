@@ -16,23 +16,23 @@ A modern React-based project utilizing the latest frontend technologies and tool
 
 ## 📋 Prerequisites
 
-- Node.js (v14.x or higher)
-- npm or yarn
+- Node.js 18 (use nvm or asdf)
+- npm 9
 
 ## 🛠️ Installation
 
-1. Install dependencies:
+1. Install dependencies deterministically:
    ```bash
-   npm install
-   # or
-   yarn install
+   # Ensure Node 18
+   nvm use 18 || asdf install && asdf local nodejs 18
+
+   # Install exactly from lockfile
+   npm ci
    ```
    
 2. Start the development server:
    ```bash
    npm start
-   # or
-   yarn start
    ```
 
 ## 📁 Project Structure
@@ -47,7 +47,7 @@ react_app/
 │   ├── App.jsx         # Main application component
 │   ├── Routes.jsx      # Application routes
 │   └── index.jsx       # Application entry point
-├── .env                # Environment variables
+├── .env                # Environment variables (use .env.example as template)
 ├── index.html          # HTML template
 ├── package.json        # Project dependencies and scripts
 ├── tailwind.config.js  # Tailwind CSS configuration
