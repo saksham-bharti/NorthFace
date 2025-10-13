@@ -2,6 +2,11 @@
   "name": "northstep-recruiting",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.x",
+    "npm": ">=9 <11"
+  },
+  "packageManager": "npm@9",
   "rocketCritical": {
     "dependencies": [
       "@dhiwise/component-tagger",

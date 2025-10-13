@@ -62,9 +62,9 @@ const Homepage = () => {
         {/* Footer */}
         <footer className="bg-foreground text-background py-16">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-4 gap-8 mb-8">
+            <div className="grid lg:grid-cols-6 gap-8 mb-8">
               {/* Brand */}
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-3">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
                     <img 
@@ -95,8 +95,19 @@ const Homepage = () => {
                   <li><a href="/industries-we-serve" className="text-background/80 hover:text-primary transition-colors">Industries</a></li>
                   <li><a href="/success-stories" className="text-background/80 hover:text-primary transition-colors">Success Stories</a></li>
                 </ul>
+              {/* Services - horizontal stack */}
               </div>
-
+              <div>
+                  <h5 className="text-sm font-semibold mb-2">Services</h5>
+                  <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                    <a href="/services/ExecutiveSearch" className="text-background/80 hover:text-primary transition-colors">Executive Search</a>
+                    <a href="/services/SeniorHiring" className="text-background/80 hover:text-primary transition-colors">Senior & Mid Level Hiring</a>
+                    <a href="/services/International" className="text-background/80 hover:text-primary transition-colors">International Hiring</a>
+                    <a href="/services/RPO" className="text-background/80 hover:text-primary transition-colors">RPO Solutions</a>
+                    <a href="/services/GCCHiring" className="text-background/80 hover:text-primary transition-colors">GCC Hiring</a>
+                  </div>
+                </div>
+                
               {/* Contact */}
               <div>
                 <h4 className="font-semibold mb-4">Contact</h4>

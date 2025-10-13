@@ -386,62 +386,76 @@ const International = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-elevation rounded-lg flex items-center justify-center">
-                  <img 
-                    src="/assets/images/HomeLogo.png" 
-                    alt="NorthStep" 
-                    className="w-full h-full object-cover rounded-lg"
-                  />
+      <footer className="bg-foreground text-background py-16">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-6 gap-8 mb-8">
+              {/* Brand */}
+              <div className="lg:col-span-3">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
+                    <img 
+                      src="/assets/images/Logo.png" 
+                      alt="NorthStep" 
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">NorthStep</h3>
+                    <p className="text-sm text-background/70">Global</p>
+                  </div>
                 </div>
-                <span className="text-lg font-bold">NorthStep</span>
+                <p className="text-background/80 mb-6 max-w-md">
+                  Strategic talent partnerships that transform careers and organizations. 
+                  Your next step north starts here.
+                </p>
+                <div className="flex space-x-4">
+                  <Icon name="Linkedin" size={20} className="text-background/60 hover:text-background cursor-pointer" />
+                  <Icon name="Twitter" size={20} className="text-background/60 hover:text-background cursor-pointer" />
+                  <Icon name="Facebook" size={20} className="text-background/60 hover:text-background cursor-pointer" />
+                </div>
               </div>
-              <p className="text-sm text-background/70">
-                Connecting global talent with opportunities worldwide.
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="font-semibold mb-4">Quick Links</h4>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/homepage" className="text-background/80 hover:text-primary transition-colors">Home</a></li>
+                  <li><a href="/industries-we-serve" className="text-background/80 hover:text-primary transition-colors">Industries</a></li> 
+                </ul>
+              </div>
+              {/* Services - horizontal stack */}
+              <div>
+                <h5 className="text-sm font-semibold mb-2">Services</h5>
+                <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+                  <a href="/services/ExecutiveSearch" className="text-background/80 hover:text-primary transition-colors">Executive Search</a>
+                  <a href="/services/SeniorHiring" className="text-background/80 hover:text-primary transition-colors">Senior & Mid Level Hiring</a>
+                  <a href="/services/RPO" className="text-background/80 hover:text-primary transition-colors">RPO Solutions</a>
+                  <a href="/services/GCCHiring" className="text-background/80 hover:text-primary transition-colors">GCC Hiring</a>
+                </div>
+              </div>
+              {/* Contact */}
+              <div>
+                <h4 className="font-semibold mb-4">Contact</h4>
+                <ul className="space-y-2 text-sm text-background/80">
+                  <li>+1 (555) 123-4567</li>
+                  <li>hello@northstep.com</li>
+                  <li>New York, NY</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="border-t border-background/20 pt-8 flex flex-col lg:flex-row justify-between items-center">
+              <p className="text-sm text-background/60">
+                © {new Date()?.getFullYear()} NorthStep Global. All rights reserved.
               </p>
-            </div>
-            
-            <div className="space-y-4">
-              <h4 className="font-semibold">Services</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>Executive Search</li>
-                <li>Senior & Mid Level Hiring</li>
-                <li>International Hiring</li>
-                <li>RPO Solutions</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-4">
-              <h4 className="font-semibold">Global Presence</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>North America</li>
-                <li>Europe</li>
-                <li>Asia Pacific</li>
-                <li>Middle East & Africa</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-4">
-              <h4 className="font-semibold">Company</h4>
-              <ul className="space-y-2 text-sm text-background/70">
-                <li>About Us</li>
-                <li>Contact</li>
-                <li><a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</a></li>
-                <li><a href="/cookie-policy" className="hover:text-primary transition-colors">Cookie Policy</a></li>
-              </ul>
+              <div className="flex space-x-6 mt-4 lg:mt-0">
+                <a href="/privacy-policy" className="text-background/60 hover:text-primary text-sm transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service" className="text-background/60 hover:text-primary text-sm transition-colors">Terms of Service</a>
+                <a href="/cookie-policy" className="text-background/60 hover:text-primary text-sm transition-colors">Cookie Policy</a>
+              </div>
             </div>
           </div>
-          
-          <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/70">
-            <p>&copy; {new Date().getFullYear()} NorthStep Global. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+        </footer>
     </div>
   );
 };
