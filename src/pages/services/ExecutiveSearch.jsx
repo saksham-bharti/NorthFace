@@ -306,6 +306,168 @@ const ExecutiveSearch = () => {
           </div>
         </section>
 
+        {/* Why Choose Us */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Why Choose NorthStep for Executive Search
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Inspired by industry-best practices, we blend discreet outreach, rigorous assessment,
+                and market intelligence to secure high-impact leaders.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{
+                icon: 'Sparkles', title: 'Confidential & Discreet', desc: 'Non-intrusive approach protecting brand and candidate privacy.'
+              }, {
+                icon: 'BarChart3', title: 'Data-Led Shortlists', desc: 'Competency matrices and scorecards to de-risk decisions.'
+              }, {
+                icon: 'Handshake', title: 'Partner-Led Delivery', desc: 'Senior consultants drive search strategy and engagement.'
+              }, {
+                icon: 'Clock', title: 'Speed with Quality', desc: 'Tight SLAs without compromising cultural alignment.'
+              }].map((item, idx) => (
+                <div key={idx} className="bg-white p-8 rounded-lg border border-border card-premium elevation-hover animate-slide-up">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={item.icon} size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Engagement Models */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Engagement Models</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Flexible models aligned to your urgency, confidentiality, and complexity.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-lg border border-border elevation-hover">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Lock" size={24} className="text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Retained Search</h3>
+                <p className="text-muted-foreground mb-4">Best for CXO and niche leadership roles requiring deep market mapping.</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Dedicated partner team</li>
+                  <li>• Confidential outreach</li>
+                  <li>• Bespoke assessment</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg border border-border elevation-hover">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Bolt" size={24} className="text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Confidential/Turnaround</h3>
+                <p className="text-muted-foreground mb-4">Accelerated delivery for sensitive transitions and urgent mandates.</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Time-bound shortlists</li>
+                  <li>• Replacement sensitivity</li>
+                  <li>• Risk management</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-8 rounded-lg border border-border elevation-hover">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <Icon name="Users" size={24} className="text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Board & Advisors</h3>
+                <p className="text-muted-foreground mb-4">Independent directors and advisory boards to strengthen governance.</p>
+                <ul className="text-sm text-muted-foreground space-y-1">
+                  <li>• Board composition mapping</li>
+                  <li>• Governance alignment</li>
+                  <li>• Diversity mandates</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Study Spotlight */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Case Study: Turnaround CTO Hire</h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  A PE-backed fintech required a CTO to lead a cloud re-platforming under tight timelines.
+                </p>
+                <ul className="text-muted-foreground space-y-2 mb-6">
+                  <li>• 3-week shortlist across 2 geographies</li>
+                  <li>• Behavioral and technical panels with scorecards</li>
+                  <li>• Offer to join in 32 days; 18-month retention</li>
+                </ul>
+                <div className="flex gap-3">
+                  <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Read Full Story</button>
+                  <button className="border border-border text-foreground px-6 py-3 rounded-lg font-semibold hover:bg-muted transition-colors">More Case Studies</button>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl animate-scale-in">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Impact Metrics</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">21</div>
+                    <div className="text-sm text-muted-foreground">Days to Shortlist</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">4</div>
+                    <div className="text-sm text-muted-foreground">Finalists</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">100%</div>
+                    <div className="text-sm text-muted-foreground">Panel Alignment</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">18m</div>
+                    <div className="text-sm text-muted-foreground">Retention</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-5xl mx-auto px-4 lg:px-0">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Executive Search FAQs</h2>
+              <p className="text-xl text-muted-foreground">Answers to common questions from clients and candidates.</p>
+            </div>
+            <div className="space-y-4">
+              {[{
+                q: 'How long does a typical executive search take?',
+                a: 'Most retained searches close within 30–60 days depending on role complexity and geography.'
+              }, {
+                q: 'Do you run confidential replacements?',
+                a: 'Yes. We use NDA-bound processes, anonymized briefs, and discreet outreach.'
+              }, {
+                q: 'How do you ensure cultural fit?',
+                a: 'Behavioral interviews, leadership style inventories, and reference triangulation.'
+              }].map((item, idx) => (
+                <details key={idx} className="bg-white border border-border rounded-lg p-6 group">
+                  <summary className="cursor-pointer text-lg font-semibold text-foreground flex items-center justify-between">
+                    {item.q}
+                    <span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="mt-3 text-muted-foreground">{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">

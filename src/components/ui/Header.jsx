@@ -54,7 +54,7 @@ const Header = () => {
               <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">
                 NorthStep
               </h1>
-              <p className="text-xs text-muted-foreground -mt-1">
+              <p className="text-xs text-muted-foreground -mt-1 font-bold">
                 Global
               </p>
             </div>

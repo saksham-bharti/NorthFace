@@ -182,7 +182,7 @@ const InteractiveTools = () => {
               fullWidth
               onClick={handleCalculate}
               disabled={!selectedIndustry || !selectedRole || !experience || !location}
-              className="bg-gradient-elevation mb-6"
+              className="gradient-elevation mb-6"
             >
               Calculate Salary Range
             </Button>

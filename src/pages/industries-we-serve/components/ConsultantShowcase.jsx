@@ -183,7 +183,7 @@ const ConsultantShowcase = () => {
                   <Button 
                     variant="default" 
                     size="sm"
-                    className="flex-1 bg-gradient-elevation"
+                    className="flex-1 gradient-elevation"
                   >
                     Connect Now
                   </Button>

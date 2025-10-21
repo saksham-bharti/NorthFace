@@ -318,7 +318,7 @@ const InteractiveMetrics = () => {
             Join the {metrics?.placementRate}% of candidates who successfully advance their careers with NorthStep's strategic approach to talent placement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-gradient-elevation text-primary-foreground rounded-lg font-medium hover:shadow-elevation transition-all duration-300 flex items-center justify-center space-x-2">
+            <button className="px-8 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center space-x-2">
               <Icon name="UserPlus" size={20} />
               <span>Start Your Journey</span>
             </button>
