@@ -291,6 +291,113 @@ const SeniorHiring = () => {
           </div>
         </section>
 
+        {/* Value Proposition */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Why Partner with NorthStep</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">From market mapping to onboarding, we deliver leaders who accelerate outcomes.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{
+                icon: 'Compass', title: 'Role Clarity', desc: 'Outcome-based role scorecards and success profiles.'
+              }, {
+                icon: 'Users', title: 'Passive Talent Access', desc: 'Warm networks across functions and industries.'
+              }, {
+                icon: 'Sparkles', title: 'Assessment Rigor', desc: 'Behavioral, technical, and culture alignment checks.'
+              }, {
+                icon: 'Gauge', title: 'Predictable SLAs', desc: 'Time-bound stages for transparency and speed.'
+              }].map((f, i) => (
+                <div key={i} className="bg-white p-8 rounded-lg border border-border card-premium elevation-hover animate-slide-up">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={f.icon} size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{f.title}</h3>
+                  <p className="text-muted-foreground">{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Engagement Options */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {[{
+                icon: 'CheckCircle', title: 'Contingent', points: ['Pay on success', 'Rapid shortlist', 'Ideal for common roles']
+              }, { icon: 'Target', title: 'Retained', points: ['Dedicated team', 'Deep mapping', 'Confidentiality'] }, { icon: 'Layers', title: 'Project Hiring', points: ['Batch mandates', 'Time-bound delivery', 'Multi-location'] }].map((m, i) => (
+                <div key={i} className="bg-white p-8 rounded-lg border border-border elevation-hover">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={m.icon} size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{m.title}</h3>
+                  <ul className="text-sm text-muted-foreground space-y-1">
+                    {m.points.map((p) => (<li key={p}>• {p}</li>))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Case Study */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Case Study: Scaling a Pre-IPO Sales Org</h2>
+                <p className="text-lg text-muted-foreground mb-4">Placed 14 quota-carrying leaders across 6 cities in 9 weeks.</p>
+                <ul className="text-muted-foreground space-y-2 mb-6">
+                  <li>• 3.2x pipeline improvement in 2 quarters</li>
+                  <li>• 92% 12-month retention</li>
+                  <li>• 37 days avg. time-to-fill</li>
+                </ul>
+                <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">View Details</button>
+              </div>
+              <div className="order-1 lg:order-2 bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl animate-scale-in">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Impact Overview</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">14</div>
+                    <div className="text-sm text-muted-foreground">Leaders Hired</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">9</div>
+                    <div className="text-sm text-muted-foreground">Weeks</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">92%</div>
+                    <div className="text-sm text-muted-foreground">Retention</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">37</div>
+                    <div className="text-sm text-muted-foreground">Days TTF</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-5xl mx-auto px-4 lg:px-0">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Senior Hiring FAQs</h2>
+              <p className="text-xl text-muted-foreground">Practical answers for hiring teams and candidates.</p>
+            </div>
+            <div className="space-y-4">
+              {[{ q: 'What locations do you cover?', a: 'Pan-India and key global hubs across APAC, EMEA, and NA.' }, { q: 'Can you sign exclusivity?', a: 'Yes. We also run hybrid models depending on urgency and role seniority.' }, { q: 'How do you benchmark compensation?', a: 'We use live-market data, internal parity checks, and role leveling frameworks.' }].map((f, i) => (
+                <details key={i} className="bg-white border border-border rounded-lg p-6 group">
+                  <summary className="cursor-pointer text-lg font-semibold text-foreground flex items-center justify-between">{f.q}<span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span></summary>
+                  <p className="mt-3 text-muted-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">

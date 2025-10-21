@@ -44,7 +44,7 @@ const IndustriesWeServe = () => {
               {/* Brand */}
               <div className="lg:col-span-3">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 gradient-elevation rounded-lg flex items-center justify-center">
                     <img 
                       src="/assets/images/Logo.png" 
                       alt="NorthStep" 

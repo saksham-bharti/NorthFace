@@ -417,6 +417,62 @@ const GCCHiring = () => {
           </div>
         </section>
 
+        {/* BOT Model & Build-Operate-Transfer */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Build-Operate-Transfer (BOT) for GCCs</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Stand up, stabilize, and transition your GCC with predictable timelines.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{ n: '1', t: 'Build', d: 'Location strategy, leadership hiring, and core pod setup.' }, { n: '2', t: 'Operate', d: 'Scalable hiring engine, playbooks, and KPI governance.' }, { n: '3', t: 'Optimize', d: 'Cost, quality, and productivity improvements with benchmarks.' }, { n: '4', t: 'Transfer', d: 'Knowledge handover and steady-state transition to your team.' }].map((s) => (
+                <div key={s.n} className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl font-bold text-primary">{s.n}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{s.t}</h3>
+                  <p className="text-muted-foreground">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{ i: 'DollarSign', h: 'Cost Advantage', d: 'Arbitrage without compromising capability maturity.' }, { i: 'Cpu', h: 'Capability Depth', d: 'Tech, finance, ops, and analytics under one roof.' }, { i: 'Shield', h: 'Compliance Ready', d: 'Policies, SOC, ISO pathways and secure operations.' }, { i: 'Globe', h: 'Scale Fast', d: 'Multi-city ramp with proven campus and lateral channels.' }].map((b, k) => (
+                <div key={k} className="bg-white p-8 rounded-lg border border-border card-premium elevation-hover animate-slide-up">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={b.i} size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{b.h}</h3>
+                  <p className="text-muted-foreground">{b.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-5xl mx-auto px-4 lg:px-0">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">GCC Hiring FAQs</h2>
+              <p className="text-xl text-muted-foreground">Clarity on setup, scale, and compliance.</p>
+            </div>
+            <div className="space-y-4">
+              {[{ q: 'Do you help with the first 20 leadership hires?', a: 'Yes. We prioritize leadership and function heads to create a strong spine.' }, { q: 'Can you support multi-city GCCs?', a: 'Yes. We calibrate local talent pools and cost dynamics across hubs.' }, { q: 'What about compliance and IT policies?', a: 'We align with your InfoSec and HR teams and provide templates and partners.' }].map((f, i) => (
+                <details key={i} className="bg-white border border-border rounded-lg p-6 group">
+                  <summary className="cursor-pointer text-lg font-semibold text-foreground flex items-center justify-between">{f.q}<span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span></summary>
+                  <p className="mt-3 text-muted-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">

@@ -281,6 +281,60 @@ const RPO = () => {
           </div>
         </section>
 
+        {/* Operating Model */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Our RPO Operating Model</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Embed a dedicated, tech-enabled recruiting squad aligned to your brand.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{ icon: 'Megaphone', title: 'Talent Marketing', desc: 'Employer branding, content, and campaign management.' }, { icon: 'Users', title: 'Sourcing Pod', desc: 'Specialist sourcers for speed and quality.' }, { icon: 'Workflow', title: 'Process Orchestration', desc: 'SLAs, intake, screening, and calibration loops.' }, { icon: 'BarChart3', title: 'Insights & QA', desc: 'Dashboards, NPS, and continuous improvement.' }].map((b, i) => (
+                <div key={i} className="bg-white p-8 rounded-lg border border-border card-premium elevation-hover animate-slide-up">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon name={b.icon} size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{b.title}</h3>
+                  <p className="text-muted-foreground">{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SLAs */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {[{ title: 'Time-to-Submit', value: '72h', desc: 'Initial profiles post-intake for priority roles.' }, { title: 'Hiring Manager NPS', value: '90+', desc: 'Quarterly pulse on experience quality.' }, { title: 'Offer Acceptance', value: '95%', desc: 'Guided closes and expectation alignment.' }].map((s) => (
+                <div key={s.title} className="bg-white p-8 rounded-lg border border-border text-center elevation-hover">
+                  <div className="text-4xl font-bold text-primary mb-2">{s.value}</div>
+                  <div className="text-lg font-semibold text-foreground mb-2">{s.title}</div>
+                  <p className="text-muted-foreground">{s.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-5xl mx-auto px-4 lg:px-0">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">RPO FAQs</h2>
+              <p className="text-xl text-muted-foreground">Common questions about engagement and delivery.</p>
+            </div>
+            <div className="space-y-4">
+              {[{ q: 'Can you integrate with our ATS?', a: 'Yes. We work with leading ATS platforms and set up shared dashboards.' }, { q: 'How do you price RPO?', a: 'Fixed monthly fee with success components, tailored to scope and volume.' }, { q: 'Do you support global hiring?', a: 'Yes. Our pods operate across time zones with a follow-the-sun model.' }].map((f, i) => (
+                <details key={i} className="bg-white border border-border rounded-lg p-6 group">
+                  <summary className="cursor-pointer text-lg font-semibold text-foreground flex items-center justify-between">{f.q}<span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span></summary>
+                  <p className="mt-3 text-muted-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Technology Stack */}
         <section className="py-20 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">

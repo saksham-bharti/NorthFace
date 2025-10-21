@@ -363,6 +363,70 @@ const International = () => {
           </div>
         </section>
 
+        {/* Compliance & Mobility */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Compliance, Immigration & Mobility</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">We navigate complex cross-border rules so your teams can focus on impact.</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{ icon: 'FileText', title: 'Work Permits', desc: 'End-to-end guidance for permits, visas, and extensions.' }, { icon: 'Shield', title: 'Legal & Tax', desc: 'Local employment law and basic tax compliance guidance.' }, { icon: 'Plane', title: 'Relocation', desc: 'Housing, schools, banking, and settlement support.' }, { icon: 'Languages', title: 'Cultural Readiness', desc: 'Cross-cultural onboarding for leaders and teams.' }].map((c, i) => (
+                <div key={i} className="bg-white p-8 rounded-lg border border-border card-premium elevation-hover animate-slide-up">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"><Icon name={c.icon} size={24} className="text-primary" /></div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{c.title}</h3>
+                  <p className="text-muted-foreground">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Case Study Spotlight */}
+        <section className="py-20 animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Case Study: APAC Expansion</h2>
+                <p className="text-lg text-muted-foreground mb-4">Built country teams in SG, AU, and IN for a SaaS major in 12 weeks.</p>
+                <ul className="text-muted-foreground space-y-2 mb-6">
+                  <li>• 17 offers across 3 markets</li>
+                  <li>• 29 days average time-to-offer</li>
+                  <li>• 96% offer acceptance</li>
+                </ul>
+                <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">Read Full Story</button>
+              </div>
+              <div className="order-1 lg:order-2 bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl animate-scale-in">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Expansion Metrics</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center"><div className="text-3xl font-bold text-primary mb-2">3</div><div className="text-sm text-muted-foreground">Countries</div></div>
+                  <div className="text-center"><div className="text-3xl font-bold text-primary mb-2">12</div><div className="text-sm text-muted-foreground">Weeks</div></div>
+                  <div className="text-center"><div className="text-3xl font-bold text-primary mb-2">96%</div><div className="text-sm text-muted-foreground">Acceptance</div></div>
+                  <div className="text-center"><div className="text-3xl font-bold text-primary mb-2">29</div><div className="text-sm text-muted-foreground">Days TTO</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQs */}
+        <section className="py-20 bg-muted/30 animate-fade-in">
+          <div className="max-w-5xl mx-auto px-4 lg:px-0">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">International Hiring FAQs</h2>
+              <p className="text-xl text-muted-foreground">Key clarity for HR and relocating candidates.</p>
+            </div>
+            <div className="space-y-4">
+              {[{ q: 'Do you sponsor or file visas?', a: 'We coordinate with your immigration counsel and support documentation and timelines.' }, { q: 'How do you manage cross-border compliance?', a: 'We align with local partners and legal updates, advising HR on employment norms.' }, { q: 'Can you build remote-first teams?', a: 'Yes. We source across time zones and set expectations for overlap and tooling.' }].map((f, i) => (
+                <details key={i} className="bg-white border border-border rounded-lg p-6 group">
+                  <summary className="cursor-pointer text-lg font-semibold text-foreground flex items-center justify-between">{f.q}<span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span></summary>
+                  <p className="mt-3 text-muted-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-primary text-primary-foreground">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">

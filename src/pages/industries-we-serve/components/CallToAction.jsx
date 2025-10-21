@@ -35,14 +35,14 @@ const CallToAction = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-elevation text-white relative overflow-hidden">
-      <div className="absolute inset-0 north-arrow-bg opacity-10"></div>
+    <section className="py-20 bg-muted/30 relative overflow-hidden">
+      <div className="absolute inset-0 north-arrow-bg opacity-5"></div>
       <div className="relative max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="text-brand-headline mb-6">
             Ready to Transform Your Hiring Strategy?
           </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-brand-subheading max-w-3xl mx-auto leading-relaxed">
             Partner with NorthStep's industry experts to access top talent, 
             reduce time-to-hire, and build exceptional teams that drive business success.
           </p>
@@ -52,11 +52,11 @@ const CallToAction = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {benefits?.map((benefit, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Icon name={benefit?.icon} size={28} className="text-yellow-300" />
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Icon name={benefit?.icon} size={28} className="text-primary" />
               </div>
-              <h3 className="text-lg font-semibold mb-3">{benefit?.title}</h3>
-              <p className="text-white/80 text-sm leading-relaxed">{benefit?.description}</p>
+              <h3 className="text-lg font-semibold text-foreground mb-3">{benefit?.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{benefit?.description}</p>
             </div>
           ))}
         </div>
@@ -65,10 +65,10 @@ const CallToAction = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats?.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-yellow-300 mb-2">
+              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">
                 {stat?.value}
               </div>
-              <div className="text-white/80 text-sm">{stat?.label}</div>
+              <div className="text-muted-foreground text-sm">{stat?.label}</div>
             </div>
           ))}
         </div>
@@ -77,9 +77,9 @@ const CallToAction = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
           <Link to="/contact-consultation">
             <Button 
-              variant="secondary" 
+              variant="default" 
               size="lg"
-              className="bg-white text-primary hover:bg-gray-50 px-8"
+              className="px-8"
             >
               <Icon name="Calendar" size={20} className="mr-2" />
               Schedule Free Consultation
@@ -88,9 +88,9 @@ const CallToAction = () => {
           
           <Link to="/for-candidates">
             <Button 
-              variant="ghost" 
+              variant="outline" 
               size="lg"
-              className="text-white border-white/30 hover:bg-white/10 px-8"
+              className="px-8 border-primary text-primary hover:bg-primary hover:text-white"
             >
               <Icon name="Search" size={20} className="mr-2" />
               Explore Opportunities
@@ -100,33 +100,33 @@ const CallToAction = () => {
 
         {/* Contact Information */}
         <div className="text-center">
-          <div className="inline-flex items-center space-x-6 bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4">
+          <div className="inline-flex items-center space-x-6 bg-background rounded-2xl px-8 py-4 card-premium">
             <div className="flex items-center space-x-2">
-              <Icon name="Phone" size={18} className="text-yellow-300" />
-              <span className="text-white/90 text-sm">1-800-NORTHSTEP</span>
+              <Icon name="Phone" size={18} className="text-primary" />
+              <span className="text-foreground text-sm">1-800-NORTHSTEP</span>
             </div>
-            <div className="hidden sm:block w-px h-6 bg-white/20"></div>
+            <div className="hidden sm:block w-px h-6 bg-border"></div>
             <div className="flex items-center space-x-2">
-              <Icon name="Mail" size={18} className="text-yellow-300" />
-              <span className="text-white/90 text-sm">hello@northstep.com</span>
+              <Icon name="Mail" size={18} className="text-primary" />
+              <span className="text-foreground text-sm">hello@northstep.com</span>
             </div>
-            <div className="hidden sm:block w-px h-6 bg-white/20"></div>
+            <div className="hidden sm:block w-px h-6 bg-border"></div>
             <div className="flex items-center space-x-2">
-              <Icon name="Clock" size={18} className="text-yellow-300" />
-              <span className="text-white/90 text-sm">24/7 Support</span>
+              <Icon name="Clock" size={18} className="text-primary" />
+              <span className="text-foreground text-sm">24/7 Support</span>
             </div>
           </div>
         </div>
 
         {/* Trust Indicators */}
         <div className="mt-12 text-center">
-          <p className="text-white/60 text-sm mb-4">Trusted by industry leaders</p>
-          <div className="flex items-center justify-center space-x-8 opacity-60">
-            <div className="text-white/40 text-sm font-medium">Fortune 500 Companies</div>
-            <div className="w-px h-4 bg-white/20"></div>
-            <div className="text-white/40 text-sm font-medium">SHRM Certified</div>
-            <div className="w-px h-4 bg-white/20"></div>
-            <div className="text-white/40 text-sm font-medium">ISO 9001 Compliant</div>
+          <p className="text-muted-foreground text-sm mb-4">Trusted by industry leaders</p>
+          <div className="flex items-center justify-center space-x-8 opacity-80">
+            <div className="text-muted-foreground text-sm font-medium">Fortune 500 Companies</div>
+            <div className="w-px h-4 bg-border"></div>
+            <div className="text-muted-foreground text-sm font-medium">SHRM Certified</div>
+            <div className="w-px h-4 bg-border"></div>
+            <div className="text-muted-foreground text-sm font-medium">ISO 9001 Compliant</div>
           </div>
         </div>
       </div>
