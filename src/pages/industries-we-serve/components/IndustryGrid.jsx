@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
-import Button from '../../../components/ui/Button';
+ 
 
 const IndustryGrid = () => {
   const industries = [
@@ -111,7 +111,7 @@ const IndustryGrid = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {industries?.map((industry) => (
+          {industries?.slice(0, 4).map((industry) => (
             <div 
               key={industry?.id}
               className="bg-card rounded-2xl overflow-hidden card-premium elevation-hover"
@@ -173,23 +173,7 @@ const IndustryGrid = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="border-primary text-primary hover:bg-primary hover:text-white"
-                  >
-                    View Opportunities
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    size="sm"
-                    className="text-primary hover:bg-primary/10"
-                  >
-                    Meet Our Team
-                    <Icon name="ArrowRight" size={16} className="ml-2" />
-                  </Button>
-                </div>
+                
               </div>
             </div>
           ))}

@@ -1,13 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/ui/Header';
-import StatsOverview from './components/StatsOverview';
-import FeaturedStories from './components/FeaturedStories';
-import VideoTestimonials from './components/VideoTestimonials';
+import Footer from '../../components/ui/Footer';
 import ClientShowcase from './components/ClientShowcase';
-import InteractiveMetrics from './components/InteractiveMetrics';
 import Icon from '../../components/AppIcon';
-import Button from '../../components/ui/Button';
 
 const SuccessStoriesPage = () => {
   return (
@@ -35,7 +31,6 @@ const SuccessStoriesPage = () => {
             <p className="text-brand-subheading max-w-4xl mx-auto mb-12">
               Real outcomes, real impact. Discover how we've helped hundreds of professionals advance their careers and companies build exceptional teams through strategic talent partnerships.
             </p>
-
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
@@ -58,117 +53,9 @@ const SuccessStoriesPage = () => {
           </div>
         </div>
       </section>
-      {/* Stats Overview Component */}
-      <StatsOverview />
-      {/* Featured Stories Component */}
-      <FeaturedStories />
-      {/* Interactive Metrics Component */}
-      <InteractiveMetrics />
-      {/* Video Testimonials Component */}
-      <VideoTestimonials />
       {/* Client Showcase Component */}
       <ClientShowcase />
-      {/* Success Story Submission CTA */}
-      <section className="py-20 bg-gradient-elevation text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Share Your Success Story
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Have you experienced career transformation through NorthStep? We'd love to feature your journey and inspire others.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="secondary"
-              className="bg-background text-foreground hover:bg-background/90"
-              iconName="Video"
-              iconPosition="left"
-            >
-              Submit Video Testimonial
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              iconName="FileText"
-              iconPosition="left"
-            >
-              Share Written Story
-            </Button>
-          </div>
-        </div>
-      </section>
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-16">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-6 gap-8 mb-8">
-              {/* Brand */}
-              <div className="lg:col-span-3">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
-                    <img 
-                      src="/assets/images/Logo.png" 
-                      alt="NorthStep" 
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">NorthStep</h3>
-                    <p className="text-sm text-background/70">Global</p>
-                  </div>
-                </div>
-                <p className="text-background/80 mb-6 max-w-md">
-                  Strategic talent partnerships that transform careers and organizations. 
-                  Your next step north starts here.
-                </p>
-                <div className="flex space-x-4">
-                  <Icon name="Linkedin" size={20} className="text-background/60 hover:text-background cursor-pointer" />
-                  <Icon name="Twitter" size={20} className="text-background/60 hover:text-background cursor-pointer" />
-                  <Icon name="Facebook" size={20} className="text-background/60 hover:text-background cursor-pointer" />
-                </div>
-              </div>
-
-              {/* Quick Links */}
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="/homepage" className="text-background/80 hover:text-primary transition-colors">Home</a></li>
-                  <li><a href="/industries-we-serve" className="text-background/80 hover:text-primary transition-colors">Industries</a></li> 
-                </ul>
-              </div>
-              {/* Services - horizontal stack */}
-              <div>
-                <h5 className="text-sm font-semibold mb-2">Services</h5>
-                <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-                  <a href="/services/ExecutiveSearch" className="text-background/80 hover:text-primary transition-colors">Executive Search</a>
-                  <a href="/services/SeniorHiring" className="text-background/80 hover:text-primary transition-colors">Senior & Mid Level Hiring</a>
-                  <a href="/services/International" className="text-background/80 hover:text-primary transition-colors">International Hiring</a>
-                  <a href="/services/RPO" className="text-background/80 hover:text-primary transition-colors">RPO Solutions</a>
-                  <a href="/services/GCCHiring" className="text-background/80 hover:text-primary transition-colors">GCC Hiring</a>
-                </div>
-              </div>
-              {/* Contact */}
-              <div>
-                <h4 className="font-semibold mb-4">Contact</h4>
-                <ul className="space-y-2 text-sm text-background/80">
-                  <li>+1 (555) 123-4567</li>
-                  <li>hello@northstep.com</li>
-                  <li>New York, NY</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t border-background/20 pt-8 flex flex-col lg:flex-row justify-between items-center">
-              <p className="text-sm text-background/60">
-                © {new Date()?.getFullYear()} NorthStep Global. All rights reserved.
-              </p>
-              <div className="flex space-x-6 mt-4 lg:mt-0">
-                <a href="/privacy-policy" className="text-background/60 hover:text-primary text-sm transition-colors">Privacy Policy</a>
-                <a href="/terms-of-service" className="text-background/60 hover:text-primary text-sm transition-colors">Terms of Service</a>
-                <a href="/cookie-policy" className="text-background/60 hover:text-primary text-sm transition-colors">Cookie Policy</a>
-              </div>
-            </div>
-          </div>
-        </footer>
+      <Footer />
     </div>
   );
 };

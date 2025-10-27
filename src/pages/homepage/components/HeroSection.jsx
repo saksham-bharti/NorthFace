@@ -7,25 +7,25 @@ const HeroSection = () => {
   return (
     <>
       {/* Top hero: image only (no text) */}
-      <section className="relative min-h-[70vh] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="/assets/images/home_bg.png"
-            alt="NorthStep background"
-            className="w-full h-full object-cover"
-          />
-          {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-card/80 to-muted/85"></div>
+      <section className="relative bg-background">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="relative h-[70vh] rounded-2xl overflow-hidden">
+            {/* Background Image */}
+            <img
+              src="/assets/images/home_bg.png"
+              alt="NorthStep background"
+              className="w-full h-full object-cover"
+            />
+            {/* Overlay for readability */}
+            <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-card/80 to-muted/85"></div>
+            {/* Background Pattern */}
+            <div className="absolute inset-0 north-arrow-bg opacity-20"></div>
+            {/* Animated Background Elements */}
+            <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-elevation rounded-full opacity-10 animate-pulse"></div>
+            <div className="absolute bottom-20 right-10 w-48 h-48 bg-secondary/10 rounded-full opacity-20 animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-accent/10 rounded-full opacity-15 animate-pulse delay-500"></div>
+          </div>
         </div>
-        {/* Background Pattern */}
-        <div className="absolute inset-0 north-arrow-bg opacity-20"></div>
-        {/* Animated Background Elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-elevation rounded-full opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-secondary/10 rounded-full opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-accent/10 rounded-full opacity-15 animate-pulse delay-500"></div>
-
-        <div className="relative max-w-7xl mx-auto px-4 lg:px-8 pt-28 pb-24"></div>
       </section>
 
       {/* Content below the image */}
@@ -35,7 +35,7 @@ const HeroSection = () => {
             {/* Left Content: badge, paragraph, metrics, CTAs */}
             <div className="space-y-8">
               <h1 className="text-brand-hero">
-                Transform Your Career with 
+                Build Exceptional Teams with
                 <span className="text-brand-primary"> Strategic </span>
                 Talent Partnership
               </h1>
@@ -62,29 +62,6 @@ const HeroSection = () => {
                   <div className="text-2xl font-bold text-accent">14 Days</div>
                   <div className="text-sm text-muted-foreground">Time to Hire</div>
                 </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/for-candidates">
-                  <Button 
-                    variant="default" 
-                    className="bg-gradient-elevation hover:shadow-elevation w-full sm:w-auto"
-                    iconName="User"
-                    iconPosition="left"
-                  >
-                    I'm a Candidate
-                  </Button>
-                </Link>
-                <Link to="/contact-consultation">
-                  <Button 
-                    variant="outline" 
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
-                    iconName="Building2"
-                    iconPosition="left"
-                  >
-                    I'm an Employer
-                  </Button>
-                </Link>
               </div>
             </div>
 

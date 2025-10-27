@@ -73,30 +73,7 @@ const CallToAction = () => {
           ))}
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-          <Link to="/contact-consultation">
-            <Button 
-              variant="default" 
-              size="lg"
-              className="px-8"
-            >
-              <Icon name="Calendar" size={20} className="mr-2" />
-              Schedule Free Consultation
-            </Button>
-          </Link>
-          
-          <Link to="/for-candidates">
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8 border-primary text-primary hover:bg-primary hover:text-white"
-            >
-              <Icon name="Search" size={20} className="mr-2" />
-              Explore Opportunities
-            </Button>
-          </Link>
-        </div>
+        
 
         {/* Contact Information */}
         <div className="text-center">

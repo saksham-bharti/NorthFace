@@ -22,6 +22,8 @@ const Header = () => {
   ];
 
   const isActivePath = (path) => location?.pathname === path;
+  const isInServices = location?.pathname?.startsWith('/services/');
+  const isHomeActive = location?.pathname === '/homepage' || location?.pathname === '/';
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -51,10 +53,10 @@ const Header = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground">
+              <h1 className="text-sm sm:text-base lg:text-lg font-bold leading-none text-foreground">
                 NorthStep
               </h1>
-              <p className="text-xs text-muted-foreground -mt-1 font-bold">
+              <p className="text-sm sm:text-base lg:text-lg font-bold leading-none text-foreground -mt-2">
                 Global
               </p>
             </div>
@@ -66,7 +68,7 @@ const Header = () => {
             <Link
               to="/homepage"
               className={`px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover whitespace-nowrap inline-flex items-center gap-2 ${
-                isActivePath('/homepage')
+                isHomeActive
                   ? 'bg-primary text-primary-foreground shadow-brand'
                   : 'text-foreground hover:text-primary hover:bg-muted'
               }`}
@@ -77,7 +79,9 @@ const Header = () => {
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover text-foreground hover:text-primary hover:bg-muted inline-flex items-center gap-2 whitespace-nowrap">
+              <button className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 elevation-hover inline-flex items-center gap-2 whitespace-nowrap ${
+                isInServices ? 'bg-primary text-primary-foreground shadow-brand' : 'text-foreground hover:text-primary hover:bg-muted'
+              }`}>
                 <span>Services</span>
                 <Icon name="ChevronDown" size={16} />
               </button>
@@ -86,7 +90,11 @@ const Header = () => {
                   <Link
                     key={svc.path}
                     to={svc.path}
-                    className="block px-4 py-2 text-sm text-foreground hover:bg-muted hover:text-primary"
+                    className={`block px-4 py-2 text-sm rounded-md transition-colors ${
+                      isActivePath(svc.path)
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-foreground hover:bg-muted hover:text-primary'
+                    }`}
                   >
                     {svc.name}
                   </Link>
@@ -163,7 +171,11 @@ const Header = () => {
                       key={svc.path}
                       to={svc.path}
                       onClick={closeMobileMenu}
-                      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 text-foreground hover:text-primary hover:bg-muted"
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                        isActivePath(svc.path)
+                          ? 'bg-primary text-primary-foreground'
+                          : 'text-foreground hover:text-primary hover:bg-muted'
+                      }`}
                     >
                       <Icon name="ArrowRight" size={18} />
                       <span>{svc.name}</span>
