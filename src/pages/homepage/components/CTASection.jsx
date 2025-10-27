@@ -4,29 +4,6 @@ import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
 
 const CTASection = () => {
-  const quickActions = [
-    {
-      title: 'Browse Opportunities',
-      description: 'Explore curated positions that match your career goals',
-      icon: 'Search',
-      route: '/for-candidates',
-      color: 'primary'
-    },
-    {
-      title: 'Schedule Consultation',
-      description: 'Get personalized guidance from our expert recruiters',
-      icon: 'Calendar',
-      route: '/contact-consultation',
-      color: 'secondary'
-    },
-    {
-      title: 'View Success Stories',
-      description: 'See how we\'ve transformed careers and companies',
-      icon: 'Trophy',
-      route: '/success-stories',
-      color: 'success'
-    }
-  ];
 
   const contactMethods = [
     {
@@ -52,75 +29,7 @@ const CTASection = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        {/* Main CTA */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-brand-hero mb-6">
-            Ready to Take Your 
-            <span className="text-brand-primary"> Next Step North</span>?
-          </h2>
-          <p className="text-brand-subheading max-w-3xl mx-auto mb-8">
-            Whether you're an ambitious professional seeking your breakthrough role or a visionary company building an exceptional team, we're here to make it happen. Let's start the conversation today.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link to="/for-candidates">
-              <Button 
-                variant="default" 
-                className="bg-gradient-elevation hover:shadow-elevation text-lg px-8 py-4 h-auto"
-                iconName="User"
-                iconPosition="left"
-              >
-                I'm Looking for Opportunities
-              </Button>
-            </Link>
-            <Link to="/contact-consultation">
-              <Button 
-                variant="outline" 
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 h-auto"
-                iconName="Building2"
-                iconPosition="left"
-              >
-                I Need to Hire Talent
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Quick Actions Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {quickActions?.map((action, index) => {
-            const colorClasses = {
-              primary: 'bg-gradient-elevation text-white',
-              secondary: 'bg-secondary text-white',
-              success: 'bg-success text-white'
-            };
-
-            return (
-              <Link
-                key={index}
-                to={action?.route}
-                className="group block"
-              >
-                <div className="bg-card rounded-2xl p-6 shadow-lg border border-border group-hover:shadow-2xl transition-all duration-300 elevation-hover">
-                  <div className={`w-16 h-16 ${colorClasses?.[action?.color]} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon name={action?.icon} size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                    {action?.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {action?.description}
-                  </p>
-                  <div className="flex items-center mt-4 text-primary group-hover:translate-x-2 transition-transform duration-300">
-                    <span className="text-sm font-medium mr-2">Get Started</span>
-                    <Icon name="ArrowRight" size={16} />
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-
+        
         {/* Contact Information */}
         <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
           <div className="text-center mb-8">

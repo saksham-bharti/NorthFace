@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/ui/Header';
+import Footer from '../../components/ui/Footer';
 import Icon from '../../components/AppIcon';
 
 const SeniorHiring = () => {
@@ -23,82 +24,63 @@ const SeniorHiring = () => {
                 strategic value, leadership capabilities, and industry expertise to drive your 
                 organization's growth and success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-                  Start Hiring Process
-                </button>
-                <button className="border border-border text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-muted transition-colors">
-                  View Success Stories
-                </button>
-              </div>
             </div>
           </div>
         </section>
-
-        {/* Service Overview */}
+        {/* Senior & Mid-Level Hiring Overview (text-focused) */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                  Comprehensive Senior & Mid-Level Recruitment
-                </h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Our systematic approach combines market intelligence, behavioral assessment, 
-                  and cultural fit analysis to identify professionals who not only meet your 
-                  technical requirements but also align with your organizational values and vision.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon name="Check" size={14} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Strategic Role Mapping</h3>
-                      <p className="text-muted-foreground">Deep understanding of role requirements and organizational context</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon name="Check" size={14} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Talent Pipeline Development</h3>
-                      <p className="text-muted-foreground">Building relationships with passive candidates and industry leaders</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon name="Check" size={14} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Cultural Assessment</h3>
-                      <p className="text-muted-foreground">Ensuring alignment with company culture and leadership style</p>
-                    </div>
-                  </div>
-                </div>
+          <div className="max-w-5xl mx-auto px-4 lg:px-0">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-2">Senior & Mid-Level Hiring</h2>
+            <p className="text-sm uppercase tracking-wide text-primary mb-6">The engine room of your organization</p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              Senior and mid-level leaders are the indispensable engine room of any successful business—the professionals who drive
+              execution, manage teams, and translate strategic vision into tangible outcomes. Recognizing their pivotal role, Northstep
+              Global specializes in identifying and securing these critical individuals. We partner closely with your hiring teams to
+              precisely clarify must-have competencies, essential leadership behaviors, and the nuanced cultural fit required for
+              sustained success. Our commitment is to deliver meticulously curated shortlists that perfectly balance proven capability,
+              seamless cultural integration, and significant growth potential across all your functions and locations.
+            </p>
+
+            <h3 className="text-xl font-semibold text-foreground mb-4">Our Approach: Strategic, Efficient, and Results-Driven</h3>
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="p-6 rounded-lg border border-border bg-background">
+                <h4 className="font-semibold text-foreground mb-2">Outcome-Based Role Scorecards</h4>
+                <p className="text-muted-foreground">We develop clear, outcome-based scorecards for each role, integrating market
+                insights to ensure appropriate leveling and competitive positioning.</p>
               </div>
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">85%</div>
-                    <div className="text-sm text-muted-foreground">Retention Rate</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">30</div>
-                    <div className="text-sm text-muted-foreground">Days Avg. Time</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">200+</div>
-                    <div className="text-sm text-muted-foreground">Senior Placements</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">95%</div>
-                    <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-                  </div>
-                </div>
+              <div className="p-6 rounded-lg border border-border bg-background">
+                <h4 className="font-semibold text-foreground mb-2">Targeted Sourcing</h4>
+                <p className="text-muted-foreground">Our expansive network and intelligent sourcing strategies identify and engage
+                talent from peer companies, adjacent industries, and emerging talent pools.</p>
+              </div>
+              <div className="p-6 rounded-lg border border-border bg-background">
+                <h4 className="font-semibold text-foreground mb-2">Behavioral & Situational Assessment</h4>
+                <p className="text-muted-foreground">Rigorous assessment focused on real-world application, using behavioral and
+                situational interviewing techniques with detailed comparative notes.</p>
+              </div>
+              <div className="p-6 rounded-lg border border-border bg-background">
+                <h4 className="font-semibold text-foreground mb-2">Structured Process with Rapid Turnarounds</h4>
+                <p className="text-muted-foreground">Clear timelines, rapid turnarounds, and transparent communication backed by
+                Service Level Agreements (SLAs).</p>
               </div>
             </div>
+
+            <h3 className="text-xl font-semibold text-foreground mb-4">Where We Help Most: Powering Your Core Functions</h3>
+            <div className="rounded-lg border border-border p-6 bg-muted/30 mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-3">Northstep Global is adept at strengthening the foundational and
+              growth-oriented functions of your organization. We are the trusted partner for:</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li><span className="font-medium text-foreground">Key Functional Hires:</span> From Sales, Product, and Engineering to
+                Finance, HR, Operations, and Customer functions, we deliver talent that drives immediate impact.</li>
+                <li><span className="font-medium text-foreground">Single Hires & Cohort Builds:</span> Whether it's filling a crucial
+                individual role or building entire teams for new locations, greenfield initiatives, or significant capability uplifts,
+                we scale our approach to your needs.</li>
+              </ul>
+            </div>
+            <p className="text-muted-foreground leading-relaxed">
+              Let Northstep Global be your strategic partner in building robust, high-performing teams at the senior and mid-levels,
+              ensuring your business has the leadership capacity to thrive and innovate.
+            </p>
           </div>
         </section>
 
@@ -202,296 +184,9 @@ const SeniorHiring = () => {
             </div>
           </div>
         </section>
-
-        {/* Process Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Our Systematic Hiring Process
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                A proven methodology that ensures quality placements and long-term success 
-                for both candidates and organizations.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">1</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Requirement Analysis</h3>
-                <p className="text-muted-foreground">
-                  Deep dive into role requirements, team dynamics, and organizational culture 
-                  to create a comprehensive candidate profile.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">2</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Talent Sourcing</h3>
-                <p className="text-muted-foreground">
-                  Multi-channel approach including database search, networking, referrals, 
-                  and passive candidate engagement.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">3</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Assessment & Screening</h3>
-                <p className="text-muted-foreground">
-                  Comprehensive evaluation including technical skills, behavioral assessment, 
-                  and cultural fit analysis.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary">4</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Placement & Support</h3>
-                <p className="text-muted-foreground">
-                  Facilitating smooth onboarding and providing ongoing support to ensure 
-                  successful integration and retention.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Industries We Serve */}
-        <section className="py-20 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Industries We Serve
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Our extensive industry expertise enables us to understand sector-specific 
-                requirements and find the right talent for your business needs.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {[
-                'Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 
-                'Retail & E-commerce', 'Consulting', 'Energy & Utilities', 'Real Estate',
-                'Education', 'Media & Entertainment', 'Automotive', 'Pharmaceuticals'
-              ].map((industry) => (
-                <div key={industry} className="bg-white p-6 rounded-lg shadow-sm border border-border text-center hover:shadow-md transition-shadow">
-                  <div className="text-sm font-medium text-foreground">{industry}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Value Proposition */}
-        <section className="py-20 bg-muted/30 animate-fade-in">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Why Partner with NorthStep</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">From market mapping to onboarding, we deliver leaders who accelerate outcomes.</p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[{
-                icon: 'Compass', title: 'Role Clarity', desc: 'Outcome-based role scorecards and success profiles.'
-              }, {
-                icon: 'Users', title: 'Passive Talent Access', desc: 'Warm networks across functions and industries.'
-              }, {
-                icon: 'Sparkles', title: 'Assessment Rigor', desc: 'Behavioral, technical, and culture alignment checks.'
-              }, {
-                icon: 'Gauge', title: 'Predictable SLAs', desc: 'Time-bound stages for transparency and speed.'
-              }].map((f, i) => (
-                <div key={i} className="bg-white p-8 rounded-lg border border-border card-premium elevation-hover animate-slide-up">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name={f.icon} size={24} className="text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{f.title}</h3>
-                  <p className="text-muted-foreground">{f.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Engagement Options */}
-        <section className="py-20 animate-fade-in">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-8">
-              {[{
-                icon: 'CheckCircle', title: 'Contingent', points: ['Pay on success', 'Rapid shortlist', 'Ideal for common roles']
-              }, { icon: 'Target', title: 'Retained', points: ['Dedicated team', 'Deep mapping', 'Confidentiality'] }, { icon: 'Layers', title: 'Project Hiring', points: ['Batch mandates', 'Time-bound delivery', 'Multi-location'] }].map((m, i) => (
-                <div key={i} className="bg-white p-8 rounded-lg border border-border elevation-hover">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name={m.icon} size={24} className="text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{m.title}</h3>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    {m.points.map((p) => (<li key={p}>• {p}</li>))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Case Study */}
-        <section className="py-20 bg-muted/30 animate-fade-in">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Case Study: Scaling a Pre-IPO Sales Org</h2>
-                <p className="text-lg text-muted-foreground mb-4">Placed 14 quota-carrying leaders across 6 cities in 9 weeks.</p>
-                <ul className="text-muted-foreground space-y-2 mb-6">
-                  <li>• 3.2x pipeline improvement in 2 quarters</li>
-                  <li>• 92% 12-month retention</li>
-                  <li>• 37 days avg. time-to-fill</li>
-                </ul>
-                <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">View Details</button>
-              </div>
-              <div className="order-1 lg:order-2 bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl animate-scale-in">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Impact Overview</h3>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">14</div>
-                    <div className="text-sm text-muted-foreground">Leaders Hired</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">9</div>
-                    <div className="text-sm text-muted-foreground">Weeks</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">92%</div>
-                    <div className="text-sm text-muted-foreground">Retention</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">37</div>
-                    <div className="text-sm text-muted-foreground">Days TTF</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQs */}
-        <section className="py-20 animate-fade-in">
-          <div className="max-w-5xl mx-auto px-4 lg:px-0">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Senior Hiring FAQs</h2>
-              <p className="text-xl text-muted-foreground">Practical answers for hiring teams and candidates.</p>
-            </div>
-            <div className="space-y-4">
-              {[{ q: 'What locations do you cover?', a: 'Pan-India and key global hubs across APAC, EMEA, and NA.' }, { q: 'Can you sign exclusivity?', a: 'Yes. We also run hybrid models depending on urgency and role seniority.' }, { q: 'How do you benchmark compensation?', a: 'We use live-market data, internal parity checks, and role leveling frameworks.' }].map((f, i) => (
-                <details key={i} className="bg-white border border-border rounded-lg p-6 group">
-                  <summary className="cursor-pointer text-lg font-semibold text-foreground flex items-center justify-between">{f.q}<span className="text-muted-foreground group-open:rotate-45 transition-transform">+</span></summary>
-                  <p className="mt-3 text-muted-foreground">{f.a}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-primary text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ready to Build Your Leadership Team?
-            </h2>
-            <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-              Partner with us to find senior and mid-level professionals who will drive your 
-              organization's success. Our systematic approach ensures the right cultural and 
-              strategic fit for long-term success.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Start Hiring Process
-              </button>
-              <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-16">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-6 gap-8 mb-8">
-              {/* Brand */}
-              <div className="lg:col-span-3">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-elevation rounded-lg flex items-center justify-center">
-                    <img 
-                      src="/assets/images/Logo.png" 
-                      alt="NorthStep" 
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">NorthStep</h3>
-                    <p className="text-sm text-background/70">Global</p>
-                  </div>
-                </div>
-                <p className="text-background/80 mb-6 max-w-md">
-                  Strategic talent partnerships that transform careers and organizations. 
-                  Your next step north starts here.
-                </p>
-                <div className="flex space-x-4">
-                  <Icon name="Linkedin" size={20} className="text-background/60 hover:text-background cursor-pointer" />
-                  <Icon name="Twitter" size={20} className="text-background/60 hover:text-background cursor-pointer" />
-                  <Icon name="Facebook" size={20} className="text-background/60 hover:text-background cursor-pointer" />
-                </div>
-              </div>
-
-              {/* Quick Links */}
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2 text-sm">
-                  <li><a href="/homepage" className="text-background/80 hover:text-primary transition-colors">Home</a></li>
-                  <li><a href="/industries-we-serve" className="text-background/80 hover:text-primary transition-colors">Industries</a></li> 
-                </ul>
-              </div>
-              {/* Services - horizontal stack */}
-              <div>
-                <h5 className="text-sm font-semibold mb-2">Services</h5>
-                <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-                  <a href="/services/ExecutiveSearch" className="text-background/80 hover:text-primary transition-colors">Executive Search</a>
-                  <a href="/services/International" className="text-background/80 hover:text-primary transition-colors">International Hiring</a>
-                  <a href="/services/RPO" className="text-background/80 hover:text-primary transition-colors">RPO Solutions</a>
-                  <a href="/services/GCCHiring" className="text-background/80 hover:text-primary transition-colors">GCC Hiring</a>
-                </div>
-              </div>
-              {/* Contact */}
-              <div>
-                <h4 className="font-semibold mb-4">Contact</h4>
-                <ul className="space-y-2 text-sm text-background/80">
-                  <li>+1 (555) 123-4567</li>
-                  <li>hello@northstep.com</li>
-                  <li>New York, NY</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="border-t border-background/20 pt-8 flex flex-col lg:flex-row justify-between items-center">
-              <p className="text-sm text-background/60">
-                © {new Date()?.getFullYear()} NorthStep Global. All rights reserved.
-              </p>
-              <div className="flex space-x-6 mt-4 lg:mt-0">
-                <a href="/privacy-policy" className="text-background/60 hover:text-primary text-sm transition-colors">Privacy Policy</a>
-                <a href="/terms-of-service" className="text-background/60 hover:text-primary text-sm transition-colors">Terms of Service</a>
-                <a href="/cookie-policy" className="text-background/60 hover:text-primary text-sm transition-colors">Cookie Policy</a>
-              </div>
-            </div>
-          </div>
-        </footer>
+      <Footer />
     </div>
   );
 };

@@ -24,14 +24,6 @@ const IndustryHero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link to="/contact-consultation">
-              <Button 
-                variant="default" 
-                size="lg"
-              >
-                Schedule Consultation
-              </Button>
-            </Link>
             <div className="flex items-center space-x-2 text-muted-foreground">
               <Icon name="Users" size={20} />
               <span className="text-sm">500+ Industry Specialists</span>

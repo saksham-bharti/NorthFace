@@ -12,10 +12,10 @@ const TrustIndicators = () => {
       description: 'Industry-leading success in matching candidates with ideal roles'
     },
     {
-      icon: 'DollarSign',
-      value: '$25K',
-      label: 'Average Salary Increase',
-      description: 'Our candidates see significant compensation improvements'
+      icon: 'Handshake',
+      value: '60%',
+      label: 'Faster Time-to-Hire',
+      description: 'Reduced cycle time with calibrated intake and SLAs'
     },
     {
       icon: 'Clock',
@@ -27,7 +27,7 @@ const TrustIndicators = () => {
       icon: 'Users',
       value: '2,500+',
       label: 'Successful Placements',
-      description: 'Professionals placed in their dream roles since 2020'
+      description: 'Leaders and specialists hired across functions since 2020'
     },
     {
       icon: 'Building2',
@@ -116,8 +116,7 @@ const TrustIndicators = () => {
             Trusted by Industry Leaders
           </h2>
           <p className="text-brand-subheading max-w-2xl mx-auto">
-            Our track record speaks for itself. Join thousands of professionals and hundreds of companies 
-            who have achieved success through our strategic partnerships.
+            Built for hiring teams. Predictable pipelines, measurable SLAs, and proven delivery.
           </p>
         </div>
 
@@ -171,71 +170,6 @@ const TrustIndicators = () => {
                     </span>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonials Slider */}
-        <div className="relative">
-          <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-            <div className="text-center mb-6">
-              <Icon name="Quote" size={32} className="text-primary mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                What Our Partners Say
-              </h3>
-            </div>
-
-            <div className="relative h-48 overflow-hidden">
-              {testimonials?.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-all duration-500 ${
-                    index === currentSlide
-                      ? 'opacity-100 transform translate-x-0'
-                      : index < currentSlide
-                      ? 'opacity-0 transform -translate-x-full'
-                      : 'opacity-0 transform translate-x-full'
-                  }`}
-                >
-                  <div className="text-center space-y-6">
-                    <blockquote className="text-lg text-foreground italic max-w-3xl mx-auto">
-                      "{testimonial?.quote}"
-                    </blockquote>
-                    <div className="flex items-center justify-center space-x-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-primary">
-                        <div className="w-full h-full bg-muted flex items-center justify-center">
-                          <Icon name="User" size={20} className="text-muted-foreground" />
-                        </div>
-                      </div>
-                      <div className="text-left">
-                        <div className="font-semibold text-foreground">
-                          {testimonial?.author}
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          {testimonial?.role}
-                        </div>
-                        <div className="text-sm text-primary">
-                          {testimonial?.company}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center space-x-2 mt-6">
-              {testimonials?.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    index === currentSlide ? 'bg-primary' : 'bg-muted'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
               ))}
             </div>
           </div>

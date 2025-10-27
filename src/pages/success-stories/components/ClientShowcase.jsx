@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 
 const ClientShowcase = () => {
-  const [activeIndustry, setActiveIndustry] = useState("All");
-
-  const industries = [
-    "All", "Technology", "Finance", "Healthcare", "Manufacturing", "Consulting", "Retail"
-  ];
+  
 
   const clients = [
     {
@@ -132,9 +128,7 @@ const ClientShowcase = () => {
     }
   ];
 
-  const filteredClients = activeIndustry === "All" 
-    ? clients 
-    : clients?.filter(client => client?.industry === activeIndustry);
+  
 
   const totalPlacements = clients?.reduce((sum, client) => sum + client?.placements, 0);
   const averageRetention = Math.round(clients?.reduce((sum, client) => {
@@ -170,26 +164,11 @@ const ClientShowcase = () => {
           </div>
         </div>
 
-        {/* Industry Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {industries?.map((industry) => (
-            <button
-              key={industry}
-              onClick={() => setActiveIndustry(industry)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                activeIndustry === industry
-                  ? 'bg-primary text-primary-foreground shadow-brand'
-                  : 'bg-muted text-foreground hover:bg-primary/10'
-              }`}
-            >
-              {industry}
-            </button>
-          ))}
-        </div>
+        
 
         {/* Client Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredClients?.map((client) => (
+          {clients?.map((client) => (
             <div
               key={client?.id}
               className="bg-card rounded-xl p-6 card-premium elevation-hover"
@@ -243,81 +222,7 @@ const ClientShowcase = () => {
           ))}
         </div>
 
-        {/* Recent Activity Feed */}
-        <div className="mt-20">
-          <h3 className="text-2xl font-semibold text-foreground text-center mb-12">
-            Recent Success Highlights
-          </h3>
-          
-          <div className="max-w-4xl mx-auto space-y-4">
-            {[
-              {
-                type: "placement",
-                company: "TechFlow Dynamics",
-                role: "Senior Full Stack Developer",
-                time: "2 hours ago",
-                icon: "UserCheck"
-              },
-              {
-                type: "milestone",
-                company: "GrowthScale Ventures",
-                achievement: "Reached 15 successful placements",
-                time: "5 hours ago",
-                icon: "Trophy"
-              },
-              {
-                type: "placement",
-                company: "HealthTech Solutions",
-                role: "Product Manager",
-                time: "1 day ago",
-                icon: "UserCheck"
-              },
-              {
-                type: "partnership",
-                company: "DataScale Solutions",
-                achievement: "Extended partnership for 2025",
-                time: "2 days ago",
-                icon: "Handshake"
-              },
-              {
-                type: "placement",
-                company: "InnovateTech Solutions",
-                role: "DevOps Engineer",
-                time: "3 days ago",
-                icon: "UserCheck"
-              }
-            ]?.map((activity, index) => (
-              <div
-                key={index}
-                className="flex items-center space-x-4 p-4 bg-card rounded-lg border border-border"
-              >
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Icon name={activity?.icon} size={20} className="text-primary" />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2">
-                    <span className="font-medium text-foreground">{activity?.company}</span>
-                    {activity?.role && (
-                      <>
-                        <span className="text-muted-foreground">•</span>
-                        <span className="text-muted-foreground">Placed {activity?.role}</span>
-                      </>
-                    )}
-                    {activity?.achievement && (
-                      <>
-                        <span className="text-muted-foreground">•</span>
-                        <span className="text-muted-foreground">{activity?.achievement}</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {activity?.time}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </section>
   );
